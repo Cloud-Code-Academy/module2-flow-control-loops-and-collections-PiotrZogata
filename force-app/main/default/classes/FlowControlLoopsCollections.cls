@@ -383,17 +383,20 @@ List <Integer> myList = new List<Integer>();
      */
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
-
+        Map<String, Integer> fruitMap = new Map<String, Integer>();
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        fruitMap.put('John Doe', 50000);
         // add Jane Smith => 60000
+        fruitMap.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        fruitMap.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
-
+        fruitMap.put('Alice Johnson', 65000);
         // Get the salary of the employee
-
+        Integer salary = fruitMap.get(employeeName);
         // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return salary; 
     }
 
     /**
@@ -412,18 +415,29 @@ List <Integer> myList = new List<Integer>();
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaries.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaries.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaries.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaries.put('Alice Johnson', 65000);
 
         // Initialize a list to store the names of high paid employees
+        List<String> highPaidEmp = new List<String>();
 
         // Iterate over the Map using a for loop
+        for(String key: employeeSalaries.keySet()){
             // Check if the salary of the employee is more than 55000
-                // Add the employee to the list of high paid employees
-
+            if(employeeSalaries.get(key) > 55000){
+                // If it is, add the employee's name to the list of high paid employees
+                highPaidEmp.add(key);
+            }
+        }
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return highPaidEmp;
     }
-
 }
+
+
+
