@@ -339,8 +339,14 @@ List <Integer> myList = new List<Integer>();
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
-
-        return null; // Replace null with the variable you used to store the result
+        Decimal sum = 0;
+        for(Integer i = 0; i <= moneyInWallet.size(); i++){
+                sum += moneyInWallet[i];
+                if (sum > 40.00 ){
+                    break;
+                }
+        }
+        return sum;
     }
 
     /**
@@ -351,15 +357,19 @@ List <Integer> myList = new List<Integer>();
      */
     public static Map<String, Integer> addItemsToMap() {
         // Initialize an empty Map
-
+        Map<String, Integer> fruitMap = new Map<String, Integer>();
         // Add key-value pairs to the Map
         // add Apples => 5
+        fruitMap.put('Apples', 5);
         // add Oranges => 10
+        fruitMap.put('Oranges', 10);
         // add Bananas => 15
+        fruitMap.put('Bananas', 15);
         // add Pears => 20
+        fruitMap.put('Pears', 20);
         // add Grapes => 25
-
-        return null; // Replace null with the variable you used to store the result
+        fruitMap.put('Grapes', 25);
+        return fruitMap;
     }
 
     /**
