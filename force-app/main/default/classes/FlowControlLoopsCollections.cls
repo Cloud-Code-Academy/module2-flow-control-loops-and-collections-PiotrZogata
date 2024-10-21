@@ -295,12 +295,16 @@ List <Integer> myList = new List<Integer>();
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
+        Integer n = 0;
 
         // Loop through the list of integers
+        for(Integer num : numbers){
             // if the number is negative skip this iteration
-        
-
-        return null; // Replace null with the variable you used to store the result
+            if(num > 0){
+                n += num;
+            }
+        }
+        return n;
     }
 
     /**
@@ -313,11 +317,16 @@ List <Integer> myList = new List<Integer>();
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
-
+        Integer num = -1;
         // Loop through the list of words
+        for(Integer i = 0; i < words.size(); i++){
             // If the current word is the word to find, exit the loop
-
-        return null; // Replace null with the variable you used to store the result
+            if(words.get(i).contains(wordToFind)) {
+                num = i;
+                break;
+            }
+    }
+    return num;
     }
 
     /**
