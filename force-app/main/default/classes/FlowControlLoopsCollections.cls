@@ -64,6 +64,8 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         //Integer largestNum = null;
+        //max(integerValue1, integerValue2)
+        //Returns the larger of the two specified Integers
             if(num1 > num2){
                 return num1;
             } else if(num1 < num2){
@@ -105,7 +107,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if(a == null){
+            return null;
+        } else if (math.mod(a, 2) == 0){ 
+            return 'Even';
+        } else {
+            return 'Odd';
+        }
     }
 
     /**
@@ -116,7 +124,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        if(a == null){
+            return 'Null';
+        } else if(a == ''){
+            return 'Empty';
+        } else{
+            return 'Contains Text';
+        }
     }
 
     /**
